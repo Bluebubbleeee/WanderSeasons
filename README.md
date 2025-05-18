@@ -34,7 +34,7 @@ WanderSeasons is an Android application built for the **NIT3213 Final Assignment
 
 1. Clone the repository (or open the project in Android Studio):
    ```bash
-   git clone https://github.com/your-username/WanderSeasons.git
+   git clone https://github.com/Bluebubbleeee/WanderSeasons.git
    ```
 
 2. Build the project in **Android Studio Bumblebee or newer**
@@ -42,9 +42,9 @@ WanderSeasons is an Android application built for the **NIT3213 Final Assignment
 3. Ensure the following:
    - Minimum SDK: 28
    - Target SDK: 35
-   - Internet permission enabled in `AndroidManifest.xml`
+   - Internet permission enabled in `AndroidManifest.xml` (Already taken care of)
 
-4. Run the app on a physical device or emulator
+4. Run the app on an emulator
 
 ---
 
@@ -65,7 +65,7 @@ WanderSeasons is an Android application built for the **NIT3213 Final Assignment
 You may use:
 ```bash
 Campus: sydney
-Username: test
+Username: User
 Password: s12345678
 ```
 
@@ -75,13 +75,14 @@ Password: s12345678
 
 ```
 com.example.WanderSeasons/
-├── MyApp.kt                  # Hilt Application class
-├── ui/                      # Fragments: Login, Dashboard, Details
-├── viewmodel/               # ViewModel layer
-├── model/                   # API data models
-├── network/                 # Retrofit API interface
-├── di/                      # Hilt modules
-└── res/layout/              # XML layouts
+├── MyApp.kt                      # Hilt Application class
+├── ui/                           # Fragments: Login, Dashboard, Details
+├── viewmodel/                    # ViewModel layer
+├── model/                        # API data models
+├── network/                      # Retrofit API interface
+├── di/                           # Hilt modules
+└── res/layout/                   # XML layouts
+   └──navigation/nav_graph.xml    # Fragments navigation
 ```
 
 ---
@@ -89,7 +90,6 @@ com.example.WanderSeasons/
 ## Git History (for Assessment)
 
 - ✔️ Clear, atomic commit messages
-- ✔️ Tracks development from setup → login → API → styling
 - ✔️ Package refactor history preserved
 
 ---
@@ -99,7 +99,7 @@ com.example.WanderSeasons/
 - **Student Name**: Tasnim Chowdhury  
 - **Student ID**: s8073439  
 - **Course**: NIT3213 Mobile Application Development  
-- **University**: [Victoria University]  
+- **University**: Victoria University
 
 ---
 
