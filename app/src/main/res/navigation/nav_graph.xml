@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.wanderseasons.ui.LoginFragment"
+        android:label="Login" >
+        <action
+            android:id="@+id/action_loginFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.wanderseasons.ui.DashboardFragment"
+        android:label="Dashboard">
+
+        <argument
+            android:name="keypass"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_dashboardFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.wanderseasons.ui.DetailsFragment"
+        android:label="Details">
+        <argument
+            android:name="entityJson"
+            app:argType="string" />
+    </fragment>
+
+
+
+
+
+</navigation>

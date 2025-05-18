@@ -10,3 +10,4 @@
 **/build/generated/res/
 **/build/generated/ksp/
 **/build/generated/data_binding_base_class_source/
+**/build/**
