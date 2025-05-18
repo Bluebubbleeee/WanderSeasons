@@ -1,0 +1,12 @@
+/build
+# Ignore all generated source files
+**/build/
+**/.gradle/
+
+# Specifically ignore generated java and res folders
+**/build/generated/
+**/build/generated/source/
+**/build/generated/source/**/java/
+**/build/generated/res/
+**/build/generated/ksp/
+**/build/generated/data_binding_base_class_source/
