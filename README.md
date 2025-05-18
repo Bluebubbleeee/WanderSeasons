@@ -74,7 +74,7 @@ Password: s12345678
 ## Project Structure (Simplified)
 
 ```
-com.example.WanderSeasons/
+com.example.wanderseasons/
 ├── MyApp.kt                      # Hilt Application class
 ├── ui/                           # Fragments: Login, Dashboard, Details
 ├── viewmodel/                    # ViewModel layer
