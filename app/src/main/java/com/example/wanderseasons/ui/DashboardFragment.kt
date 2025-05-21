@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.wanderseasons.R
 import com.example.wanderseasons.databinding.FragmentDashboardBinding
 import com.example.wanderseasons.viewmodel.MainViewModel
 import com.google.gson.Gson
@@ -54,10 +55,8 @@ class DashboardFragment : Fragment() {
                 val title = keyList.getOrNull(0)?.let { entity[it].toString() } ?: "Untitled"
                 val subtitle = keyList.getOrNull(1)?.let { "$it: ${entity[it]}" } ?: ""
 
-                // Extract actual description
                 val actualDescription = entity["description"]?.toString()?.trim() ?: ""
 
-                // Build description using all other key-values (excluding "description")
                 val additionalDetails = entity.entries
                     .filter { (key, _) ->
                         key?.toString()?.lowercase() != "description"
@@ -66,7 +65,6 @@ class DashboardFragment : Fragment() {
                         "${key.toString().replaceFirstChar { it.uppercase() }}: $value"
                     }
 
-                // Combine real description with the rest
                 val fullDescription = if (actualDescription.isNotEmpty()) {
                     "$actualDescription\n\n$additionalDetails"
                 } else {
@@ -83,9 +81,13 @@ class DashboardFragment : Fragment() {
             adapter.submitList(formatted)
         }
 
-
         viewModel.error.observe(viewLifecycleOwner) {
             Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
+        }
+
+        // Handle logoff button
+        binding.logoffButton.setOnClickListener {
+            findNavController().navigate(R.id.action_dashboardFragment_to_loginFragment)
         }
     }
 

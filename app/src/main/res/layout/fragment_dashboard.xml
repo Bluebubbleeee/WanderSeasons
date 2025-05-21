@@ -5,7 +5,19 @@
     android:layout_height="match_parent"
     android:background="#3F51B5">
 
-    <!-- RecyclerView with vertical scrollbar and padding -->
+    <!-- Logoff Button -->
+    <Button
+        android:id="@+id/logoffButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logoff"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF4081"
+        android:layout_margin="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
@@ -13,9 +25,9 @@
         android:clipToPadding="false"
         android:padding="12dp"
         android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/logoffButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,7 +39,9 @@
             app:argType="string" />
     </fragment>
 
-
+    <action
+        android:id="@+id/action_dashboardFragment_to_loginFragment"
+        app:destination="@id/loginFragment" />
 
 
 
